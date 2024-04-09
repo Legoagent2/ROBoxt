@@ -317,6 +317,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3538444266504926343, guid: 8fb66e7081cc71b43804bdf1661083c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4202368381585337751, guid: 8fb66e7081cc71b43804bdf1661083c4, type: 3}
       propertyPath: m_Name
       value: Island
@@ -360,6 +364,10 @@ PrefabInstance:
     - target: {fileID: 5674766551227458017, guid: 8fb66e7081cc71b43804bdf1661083c4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228855193032208706, guid: 8fb66e7081cc71b43804bdf1661083c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
