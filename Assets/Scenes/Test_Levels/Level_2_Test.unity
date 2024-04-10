@@ -375,6 +375,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 154802531469267758, guid: 8dc98e2de3ee0924a8e400c1d6e98575, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 154802531469267758, guid: 8dc98e2de3ee0924a8e400c1d6e98575, type: 3}
       propertyPath: m_Priority
       value: 4
       objectReference: {fileID: 0}
@@ -501,6 +505,10 @@ PrefabInstance:
     - target: {fileID: 6327196590107564655, guid: 8dc98e2de3ee0924a8e400c1d6e98575, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.19761713
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542485012713988135, guid: 8dc98e2de3ee0924a8e400c1d6e98575, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
