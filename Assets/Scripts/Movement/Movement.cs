@@ -24,6 +24,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       // raycasting_origin = transform_player.position;
+        //raycasting_direction = Vector3.left;
         MoveLeftRight();
        // MoveForwardBack();
         Rotate();
@@ -37,9 +39,6 @@ public class Movement : MonoBehaviour
         transform_player.Translate(v, Space.Self);
     }
 
-    Vector3 playerPosition = player.transform.position;
-    Vector3 playerLeft = -player.transform.right;
-
     //void MoveForwardBack()
     //{
         //Vector3 vec_left = Vector3.zero;
@@ -51,15 +50,16 @@ public class Movement : MonoBehaviour
     {
         if (RotateChecker())
         {
+            
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 // Rotate left (-90 degrees)
-                transform.Rotate(0, rotation, 0);
+                transform_player.Rotate(0, 90, 0);
             }
             else if (Input.GetKeyDown(KeyCode.E))
             {
                 // Rotate right (90 degrees)
-                transform.Rotate(0, -rotation, 0);
+                transform_player.Rotate(0, -90, 0);
             }
         }
     }
@@ -68,10 +68,11 @@ public class Movement : MonoBehaviour
     {
         // Define the maximum distance to check for the horizon or obstacles
         //float viewDistance = 100f; // Adjust based on your game scale
-
+        Vector3 rayOrigin = transform_player.position;
+        Vector3 rayDirection = -transform_player.right;
         // Perform the raycast to check for obstacles
         RaycastHit hit;
-        if (!Physics.Raycast(raycasting_origin, raycasting_direction, out hit, float.PositiveInfinity))
+        if (!Physics.Raycast(rayOrigin, rayDirection, out hit, float.PositiveInfinity))
         {
             return true;
         }
