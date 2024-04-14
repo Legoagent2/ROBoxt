@@ -28354,6 +28354,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ladder
       objectReference: {fileID: 0}
+    - target: {fileID: 2316863605592023107, guid: 3b374a2a5fb400c4e9ef075e4f377fea, type: 3}
+      propertyPath: m_TagString
+      value: Ladder
+      objectReference: {fileID: 0}
     - target: {fileID: 8114972788885474696, guid: 3b374a2a5fb400c4e9ef075e4f377fea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -28518,7 +28522,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7116284486765539648, guid: c91eaf31e3655ce4eb4d585a9ed4c317, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

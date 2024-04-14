@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class Movement : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class Movement : MonoBehaviour
     public float rotation = 90f;
     Vector3 raycasting_origin;
     Vector3 raycasting_direction;
+    public bool Is_Ladder = false;
+    //public Transform chController;
+    private Rigidbody playerRigidbody;
 
     private void Awake()
     {
@@ -19,9 +24,27 @@ public class Movement : MonoBehaviour
     {
         raycasting_origin = new Vector3(-0.5f, -0.5f, 0.0f);
         raycasting_direction = new Vector3(-1.0f, rotation, 0.0f);
+        playerRigidbody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Ladder")
+        {
+            Is_Ladder = true;
+            playerRigidbody.isKinematic = true;
+        }
+    }
+
+    void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "Ladder")
+        {
+            Is_Ladder = false;
+            playerRigidbody.isKinematic = false;
+        }
+    }
+
     void Update()
     {
        // raycasting_origin = transform_player.position;
@@ -29,12 +52,13 @@ public class Movement : MonoBehaviour
         MoveLeftRight();
        // MoveForwardBack();
         Rotate();
+        ClimbLadder();
     }
 
     void MoveLeftRight()
     {
         Vector3 vec_forward = Vector3.zero;
-        vec_forward.z = Input.GetAxis("Horizontal");
+        vec_forward.z = UnityEngine.Input.GetAxis("Horizontal");
         Vector3 v = new Vector3(0.0f, 0.0f, vec_forward.z) * Time.deltaTime * 15.0f;
         transform_player.Translate(v, Space.Self);
     }
@@ -51,12 +75,12 @@ public class Movement : MonoBehaviour
         if (RotateChecker())
         {
             
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Q))
             {
                 // Rotate left (-90 degrees)
                 transform_player.Rotate(0, 90, 0);
             }
-            else if (Input.GetKeyDown(KeyCode.E))
+            else if (UnityEngine.Input.GetKeyDown(KeyCode.E))
             {
                 // Rotate right (90 degrees)
                 transform_player.Rotate(0, -90, 0);
@@ -79,6 +103,17 @@ public class Movement : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+
+    void ClimbLadder()
+    {
+        if (Is_Ladder)
+        {
+            Vector3 vec_forward = Vector3.zero;
+            vec_forward.y = UnityEngine.Input.GetAxis("Vertical");
+            Vector3 v = new Vector3(0.0f, vec_forward.y, 0.0f) * Time.deltaTime * 15.0f;
+            transform_player.Translate(v, Space.Self);
         }
     }
 }

@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 7993401071863899814}
   - component: {fileID: 3374027959548543036}
   - component: {fileID: 2395333747402726262}
+  - component: {fileID: 7116284486765539648}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -291,6 +292,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transform_player: {fileID: 6197545084505029618}
   rotation: 90
+--- !u!114 &7116284486765539648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4530057182681783346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faff947b665dc6741b9cb764113f5d1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chController: {fileID: 6197545084505029618}
+  speedUpDown: 3.2
+  SCInput: {fileID: 0}
 --- !u!1 &8803306463726821662
 GameObject:
   m_ObjectHideFlags: 0
