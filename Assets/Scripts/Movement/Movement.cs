@@ -59,8 +59,9 @@ public class Movement : MonoBehaviour
     {
         Vector3 vec_forward = Vector3.zero;
         vec_forward.z = UnityEngine.Input.GetAxis("Horizontal");
-        Vector3 v = new Vector3(0.0f, 0.0f, vec_forward.z) * Time.deltaTime * 15.0f;
-        transform_player.Translate(v, Space.Self);
+        Vector3 v = new Vector3(0.0f, 0.0f, vec_forward.z) * Time.deltaTime * 1500.0f;
+        //transform_player.Translate(v, Space.Self);
+        playerRigidbody.AddRelativeForce(v, ForceMode.Force);
     }
 
     //void MoveForwardBack()

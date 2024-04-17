@@ -36425,6 +36425,7 @@ GameObject:
   - component: {fileID: 185314702025772357}
   - component: {fileID: 6781536226526960172}
   - component: {fileID: 3742998870510243370}
+  - component: {fileID: 1794957425672553421}
   m_Layer: 0
   m_Name: entry pipe
   m_TagString: Untagged
@@ -36533,6 +36534,27 @@ MonoBehaviour:
   exitPipe: {fileID: 8713740414471037304}
   positionOffset: {x: 0, y: 1, z: 0}
   rotationOffset: {x: 0, y: 0, z: 0}
+--- !u!65 &1794957425672553421
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080476338089094743}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9084870112228057974
 GameObject:
   m_ObjectHideFlags: 0
