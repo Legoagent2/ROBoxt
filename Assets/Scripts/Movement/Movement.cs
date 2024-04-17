@@ -22,8 +22,8 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
-        raycasting_origin = new Vector3(-0.5f, -0.5f, 0.0f);
-        raycasting_direction = new Vector3(-1.0f, rotation, 0.0f);
+        //raycasting_origin = new Vector3(-0.5f, -0.5f, 0.0f);
+        //raycasting_direction = new Vector3(-1.0f, rotation, 0.0f);
         playerRigidbody = GetComponent<Rigidbody>();
     }
 
@@ -100,8 +100,12 @@ public class Movement : MonoBehaviour
         {
             return true;
         }
-        else
+        else 
         {
+            if (hit.collider.CompareTag("Glass"))
+            {
+                return true;
+            }
             return false;
         }
     }
