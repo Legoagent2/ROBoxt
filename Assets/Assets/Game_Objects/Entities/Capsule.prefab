@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3006437537884464646}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0712734, y: -0.7035056, z: 0.0712734, w: 0.7035056}
-  m_LocalPosition: {x: 10, y: 1.515, z: 0}
+  m_LocalPosition: {x: 10.979679, y: 1.7155648, z: 0.000000004656613}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 60.000004
     OrthographicSize: 5
-    NearClipPlane: 2.5
+    NearClipPlane: 4.5
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
@@ -295,6 +295,7 @@ MonoBehaviour:
   transform_player: {fileID: 6197545084505029618}
   rotation: 90
   Is_Ladder: 0
+  jump_force_start: 0
 --- !u!114 &7116284486765539648
 MonoBehaviour:
   m_ObjectHideFlags: 0
