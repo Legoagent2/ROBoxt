@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 8d898bb66c562f44f81e3fd883fbb0ce, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -526,12 +526,30 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Respawn
       objectReference: {fileID: 0}
+    - target: {fileID: 7031909425654816556, guid: 1bac2ea69d8c9024c9c2cd57a9115ccd, type: 3}
+      propertyPath: m_Name
+      value: Portcullis
+      objectReference: {fileID: 0}
+    - target: {fileID: 7031909425654816556, guid: 1bac2ea69d8c9024c9c2cd57a9115ccd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505651168919732812, guid: 1bac2ea69d8c9024c9c2cd57a9115ccd, type: 3}
+      propertyPath: m_Size.y
+      value: 1.4492732
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505651168919732812, guid: 1bac2ea69d8c9024c9c2cd57a9115ccd, type: 3}
+      propertyPath: m_Center.y
+      value: 0.2246365
+      objectReference: {fileID: 0}
     - target: {fileID: 7759041362950300631, guid: 1bac2ea69d8c9024c9c2cd57a9115ccd, type: 3}
       propertyPath: m_LocalPosition.z
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5117727126482864793, guid: 1bac2ea69d8c9024c9c2cd57a9115ccd, type: 3}
+    - {fileID: 8441904316387779197, guid: 1bac2ea69d8c9024c9c2cd57a9115ccd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6467430414501069322, guid: 1bac2ea69d8c9024c9c2cd57a9115ccd, type: 3}
