@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 0d12c0114e9b9964598667cd66d68660, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -259,7 +259,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 2.5
+  near clip plane: 4.5
   far clip plane: 1000
   field of view: 60.000004
   orthographic: 0
@@ -288,7 +288,7 @@ Transform:
   m_GameObject: {fileID: 1188397347}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0712734, y: -0.7035056, z: 0.0712734, w: 0.7035056}
-  m_LocalPosition: {x: 9.200484, y: 1.7574999, z: 0.047049284}
+  m_LocalPosition: {x: 9.690324, y: 1.8577824, z: 0.047049288}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
