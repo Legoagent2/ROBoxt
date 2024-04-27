@@ -180,12 +180,11 @@ GameObject:
   - component: {fileID: 7993401071863899814}
   - component: {fileID: 3374027959548543036}
   - component: {fileID: 2395333747402726262}
-  - component: {fileID: 7116284486765539648}
   - component: {fileID: 5770995150084527563}
   - component: {fileID: 6507119025666869979}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,7 +197,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4530057182681783346}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3, y: 1, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
@@ -295,22 +294,7 @@ MonoBehaviour:
   transform_player: {fileID: 6197545084505029618}
   rotation: 90
   Is_Ladder: 0
-  jump_force_start: 0
---- !u!114 &7116284486765539648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4530057182681783346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faff947b665dc6741b9cb764113f5d1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chController: {fileID: 6197545084505029618}
-  speedUpDown: 3.2
-  SCInput: {fileID: 0}
+  jump_force_start: 3
 --- !u!54 &5770995150084527563
 Rigidbody:
   m_ObjectHideFlags: 0
