@@ -16,4 +16,12 @@ public class Pressure_Plate : MonoBehaviour
             Cube.transform.position += new Vector3(0, 0, -2);
         }
     }
+    private void OnTriggerExit(Collider col)
+    {
+        if (isOpened != false)
+        {
+            isOpened = false;
+            Cube.transform.position -= new Vector3(0, 0, -2);
+        }
+    }
 }
