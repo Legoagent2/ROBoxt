@@ -245,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197545084505029618, guid: c91eaf31e3655ce4eb4d585a9ed4c317, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.919
+      value: -10.79
       objectReference: {fileID: 0}
     - target: {fileID: 6197545084505029618, guid: c91eaf31e3655ce4eb4d585a9ed4c317, type: 3}
       propertyPath: m_LocalPosition.z
@@ -338,6 +338,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movingblock: {fileID: 105897226}
+  X: 1
+  Y: 0
+  Z: 0
 --- !u!1001 &1102698433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -542,7 +545,7 @@ Transform:
   m_GameObject: {fileID: 2122578767}
   serializedVersion: 2
   m_LocalRotation: {x: 0.07114891, y: -0.70473224, z: 0.07139767, w: 0.7022769}
-  m_LocalPosition: {x: 8.374806, y: -5.061218, z: 0.96107316}
+  m_LocalPosition: {x: 8.374806, y: -9.932218, z: 0.96107316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -6,15 +6,29 @@ public class Block_Lever : MonoBehaviour
 {
     [SerializeField]
     GameObject Movingblock;
+    bool isMoved = false;
+    public float X;
+    public float Y;
+    public float Z;
+    private Vector3 Translator;
+    private void Start()
+    {
+        Vector3 Translator = new Vector3(X, Y, Z);
+    }
     private void OnTriggerStay(Collider other)
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-                Movingblock.transform.position = new Vector3(-2, -11, 5);
-        }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-                Movingblock.transform.position = new Vector3(-3, -11, 5);
-        }
+            if (isMoved == false)
+            {
+                Movingblock.transform.Translate(Translator * Time.deltaTime, Space.Self);
+                isMoved = true;
+            }
+            if (isMoved == true)
+            {
+                Movingblock.transform.Translate(-Translator * Time.deltaTime, Space.Self);
+                 isMoved = false;
+            }
+        }   
     }
 }
