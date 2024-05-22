@@ -338,9 +338,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movingblock: {fileID: 105897226}
+  isMoved: 0
   X: 1
   Y: 0
   Z: 0
+  Translator: {x: 0, y: 0, z: 0}
 --- !u!1001 &1102698433
 PrefabInstance:
   m_ObjectHideFlags: 0
