@@ -28090,10 +28090,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5657015566252465153}
     m_Modifications:
-    - target: {fileID: 6490618112545729793, guid: 2a9330827cb60d343bdcb1494768307c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b9cf7ef72cca0074a90857205b21e8a2, type: 2}
     - target: {fileID: 1594482249577803326, guid: 947497544cf931d4283e7145edeb1e2a, type: 3}
       propertyPath: m_Name
       value: TallPortcullis
@@ -28146,6 +28142,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6490618112545729793, guid: 2a9330827cb60d343bdcb1494768307c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b9cf7ef72cca0074a90857205b21e8a2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28552,7 +28552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 625960163387758402, guid: 66fca80e5c3c0fc4f9e29dfcc82afe33, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.308
+      value: 0.008
       objectReference: {fileID: 0}
     - target: {fileID: 625960163387758402, guid: 66fca80e5c3c0fc4f9e29dfcc82afe33, type: 3}
       propertyPath: m_LocalRotation.w
@@ -28585,6 +28585,10 @@ PrefabInstance:
     - target: {fileID: 6636353721620911086, guid: 66fca80e5c3c0fc4f9e29dfcc82afe33, type: 3}
       propertyPath: m_Name
       value: Cube (265)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993825878296590926, guid: 66fca80e5c3c0fc4f9e29dfcc82afe33, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28732,10 +28736,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5657015566252465153}
     m_Modifications:
-    - target: {fileID: 5214203363039789294, guid: 7037bf46209080d458af2cc23c8aa1c6, type: 3}
-      propertyPath: Cube
-      value: 
-      objectReference: {fileID: 1762324966015944640}
     - target: {fileID: 2709329383142349058, guid: 4e19a61aa3b779b4c918258ed511a481, type: 3}
       propertyPath: m_Name
       value: PressurePlate
@@ -28780,6 +28780,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5214203363039789294, guid: 7037bf46209080d458af2cc23c8aa1c6, type: 3}
+      propertyPath: Cube
+      value: 
+      objectReference: {fileID: 1762324966015944640}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
