@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     public bool Is_Ladder = false;
     //public Transform chController;
     private Rigidbody playerRigidbody;
-    public float jump_force_start;
+    private float jump_force_start = 2.5f;
 
     private void Awake()
     {
@@ -33,7 +33,7 @@ public class Movement : MonoBehaviour
         if (col.gameObject.tag == "Ladder")
         {
             Is_Ladder = true;
-            playerRigidbody.isKinematic = true;
+            playerRigidbody.useGravity = false;
         }
     }
 
@@ -42,7 +42,7 @@ public class Movement : MonoBehaviour
         if (col.gameObject.tag == "Ladder")
         {
             Is_Ladder = false;
-            playerRigidbody.isKinematic = false;
+            playerRigidbody.useGravity = true;
         }
     }
 
@@ -71,11 +71,12 @@ public class Movement : MonoBehaviour
         {
             jump_force_sim *= 3.0f;
         }
-        if(UnityEngine.Input.GetKeyDown(KeyCode.Space))
+        if(UnityEngine.Input.GetKeyDown(KeyCode.Space) && (Is_Ladder == false))
         {
             if(Physics.Raycast(transform_player.position, Vector3.down, 0.6f))
             {
                 playerRigidbody.AddRelativeForce(Vector3.up * jump_force_sim, ForceMode.Impulse);
+                Debug.Log("triggered");
             }
         }
     }

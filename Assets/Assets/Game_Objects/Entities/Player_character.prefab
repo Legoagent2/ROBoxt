@@ -177,10 +177,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6197545084505029618}
   - component: {fileID: 3374027959548543036}
-  - component: {fileID: 2395333747402726262}
   - component: {fileID: 5770995150084527563}
   - component: {fileID: 6507119025666869979}
   - component: {fileID: 3972740363847847500}
+  - component: {fileID: 7103122203130033500}
   m_Layer: 0
   m_Name: Player_character
   m_TagString: Player
@@ -230,22 +230,6 @@ CapsuleCollider:
   m_Height: 2.0338595
   m_Direction: 1
   m_Center: {x: 0, y: -0.0030702353, z: -0.024727583}
---- !u!114 &2395333747402726262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4530057182681783346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f58631f87862fb4d858031c5cc0b7cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transform_player: {fileID: 6197545084505029618}
-  rotation: 90
-  Is_Ladder: 0
-  jump_force_start: 3
 --- !u!54 &5770995150084527563
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -303,6 +287,22 @@ MonoBehaviour:
   - {fileID: 1404996896702283198}
   - {fileID: 3076018892180704717}
   scrollSensitivity: 1
+--- !u!114 &7103122203130033500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4530057182681783346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5bf5ebeea80e14bbb2a1d6441b9af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transform_player: {fileID: 6197545084505029618}
+  rotation: 90
+  Is_Ladder: 0
+  jump_force_start: 3.5
 --- !u!1 &6547955196996434638
 GameObject:
   m_ObjectHideFlags: 0
