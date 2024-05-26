@@ -275,7 +275,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 4.5
+  near clip plane: 11.5
   far clip plane: 1000
   field of view: 60.000004
   orthographic: 0
@@ -304,7 +304,7 @@ Transform:
   m_GameObject: {fileID: 1487290118}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000018626451, y: 0.9949072, z: -0.10079582, w: 0.00000017881393}
-  m_LocalPosition: {x: -0.025002386, y: 1.8577824, z: 2.2088401}
+  m_LocalPosition: {x: -0.025005758, y: 3.2617369, z: 9.066605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -359,6 +359,10 @@ PrefabInstance:
     - target: {fileID: 4202368381585337751, guid: 8fb66e7081cc71b43804bdf1661083c4, type: 3}
       propertyPath: m_Name
       value: Island
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381021826398078247, guid: 8fb66e7081cc71b43804bdf1661083c4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5450373306647538088, guid: 8fb66e7081cc71b43804bdf1661083c4, type: 3}
       propertyPath: m_TagString

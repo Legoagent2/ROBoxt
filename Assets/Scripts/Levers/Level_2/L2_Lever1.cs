@@ -3,24 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 
-public class Lever1 : MonoBehaviour
+public class L2_Lever1 : MonoBehaviour
 {
+    //All the variables set for the script
     bool blockMoved = false;
     bool inCube;
     [SerializeField]
     GameObject Movingblocks1;
 
+    //Detects when the player has entered the lever collider
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Inside");
         inCube = true;
     }
 
+    //Detects when the player has left the lever collider
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Outside");
         inCube = false;
     }
+
+    // Checks every frame to see if the player is trying to use the lever or not and moves the transform values
     void Update()
     {
         if(inCube)
