@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    //The different scenes being loaded in by the buttons
     public void PlayGame()
     {
         SceneManager.LoadSceneAsync(1);

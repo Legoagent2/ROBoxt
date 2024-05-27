@@ -1574,6 +1574,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: aeb8d6328b42ad5468efb547748d3753, type: 2}
+    - target: {fileID: 2562914590181600859, guid: 8fb66e7081cc71b43804bdf1661083c4, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     - target: {fileID: 2573727203250016281, guid: 8fb66e7081cc71b43804bdf1661083c4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1622,6 +1626,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: aeb8d6328b42ad5468efb547748d3753, type: 2}
+    - target: {fileID: 2712662959798666273, guid: 8fb66e7081cc71b43804bdf1661083c4, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     - target: {fileID: 2722259887627434326, guid: 8fb66e7081cc71b43804bdf1661083c4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
