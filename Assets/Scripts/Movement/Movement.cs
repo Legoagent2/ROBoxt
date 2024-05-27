@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
+
 using UnityEngine;
-using UnityEngine.Windows;
 
 public class Movement : MonoBehaviour
 {
@@ -16,6 +13,9 @@ public class Movement : MonoBehaviour
     private Rigidbody playerRigidbody;
     private float jump_force_start = 2.5f;
 
+    Animator Player;
+    bool Walking;
+
     private void Awake()
     {
         starPos_player = transform_player.position;
@@ -26,6 +26,37 @@ public class Movement : MonoBehaviour
         //raycasting_origin = new Vector3(-0.5f, -0.5f, 0.0f);
         //raycasting_direction = new Vector3(-1.0f, rotation, 0.0f);
         playerRigidbody = GetComponent<Rigidbody>();
+
+        Player = gameObject.GetComponentInChildren<Animator>();
+        Walking = false;
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.D))
+        {
+            Walking = true;
+        }
+        else
+        {
+            Walking = false;
+        }
+
+        if (Walking == false)
+        {
+            Player.SetBool("walking", false);
+        }
+
+        if (Walking == true)
+        {
+            Player.SetBool("walking", true);
+        }
+        
+        //raycasting_origin = transform_player.position;
+        //raycasting_direction = Vector3.left;
+        Jump();
+        // MoveForwardBack();
+        Rotate();
     }
 
     void OnTriggerEnter(Collider col)
@@ -54,16 +85,6 @@ public class Movement : MonoBehaviour
 
     }
 
-    void Update()
-    {
-        //raycasting_origin = transform_player.position;
-        //raycasting_direction = Vector3.left;
-        Jump();
-        // MoveForwardBack();
-        Rotate();
-
-    }
-
     void Jump()
     {
         float jump_force_sim = jump_force_start;
@@ -76,7 +97,6 @@ public class Movement : MonoBehaviour
             if(Physics.Raycast(transform_player.position, Vector3.down, 0.6f))
             {
                 playerRigidbody.AddRelativeForce(Vector3.up * jump_force_sim, ForceMode.Impulse);
-                Debug.Log("triggered");
             }
         }
     }
