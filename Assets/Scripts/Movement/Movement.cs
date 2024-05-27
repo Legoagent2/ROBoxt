@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -6,10 +5,7 @@ public class Movement : MonoBehaviour
     Vector3 starPos_player;
     public Transform transform_player;
     public float rotation = 90f;
-    //Vector3 raycasting_origin;
-    //Vector3 raycasting_direction;
     public bool Is_Ladder = false;
-    //public Transform chController;
     private Rigidbody playerRigidbody;
     private float jump_force_start = 2.5f;
 
@@ -23,8 +19,6 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
-        //raycasting_origin = new Vector3(-0.5f, -0.5f, 0.0f);
-        //raycasting_direction = new Vector3(-1.0f, rotation, 0.0f);
         playerRigidbody = GetComponent<Rigidbody>();
 
         Player = gameObject.GetComponentInChildren<Animator>();
@@ -33,6 +27,8 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        //Walking
+        //Plays the walking animation going right
         if (Input.GetKey(KeyCode.D))
         {
             Walking = true;
@@ -44,21 +40,39 @@ public class Movement : MonoBehaviour
 
         if (Walking == false)
         {
-            Player.SetBool("walking", false);
+            Player.SetBool("Walking", false);
         }
 
         if (Walking == true)
         {
-            Player.SetBool("walking", true);
+            Player.SetBool("Walking", true);
         }
-        
-        //raycasting_origin = transform_player.position;
-        //raycasting_direction = Vector3.left;
+
+        //Plays the walking animation going left
+        else if (Input.GetKey(KeyCode.A))
+        {
+            Walking = true;
+        }
+        else
+        {
+            Walking = false;
+        }
+
+        if (Walking == false)
+        {
+            Player.SetBool("Walking", false);
+        }
+
+        if (Walking == true)
+        {
+            Player.SetBool("Walking", true);
+        }
+
         Jump();
-        // MoveForwardBack();
         Rotate();
     }
 
+    //Detects when the player has entered the ladder collider
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Ladder")
@@ -85,6 +99,7 @@ public class Movement : MonoBehaviour
 
     }
 
+    //Allows the player to jump
     void Jump()
     {
         float jump_force_sim = jump_force_start;
@@ -103,25 +118,13 @@ public class Movement : MonoBehaviour
         
         
     
-
+    //Gives the player movement to traverse the game world
     void MoveLeftRight()
     {
         Vector3 vec_forward = transform.forward;
         vec_forward = vec_forward * UnityEngine.Input.GetAxis("Horizontal") * 5.0f;
-        //Vector3 v = new Vector3(0.0f, 0.0f, vec_forward.z) * 5.0f;// * Time.deltaTime;
         playerRigidbody.velocity = new Vector3(vec_forward.x, playerRigidbody.velocity.y, vec_forward.z ); 
-        
-        //transform_player.Translate(v, Space.Self);
-        //playerRigidbody.AddRelativeForce(v, ForceMode.Force);
     }
-
-    //void MoveForwardBack()
-    //{
-        //Vector3 vec_left = Vector3.zero;
-       // vec_left.x = Input.GetAxis("Horizontal");
-      //  Vector3 v = new Vector3(vec_left.x, 0.0f, 0.0f) * Time.deltaTime * 15.0f;
-       // transform_player.Translate(v, Space.Self);
-    // }
     void Rotate()
     {
         if (RotateChecker())
@@ -140,13 +143,9 @@ public class Movement : MonoBehaviour
         }
     }
 
+    //Sends out a raycast to see if theres any blocks in the players path
     bool RotateChecker()
     {
-        // Define the maximum distance to check for the horizon or obstacles
-        //float viewDistance = 100f; // Adjust based on your game scale
-        //Vector3 rayOrigin = ;
-        //Vector3 rayDirection = ;
-        // Perform the raycast to check for obstacles
         RaycastHit hit;
         if (!Physics.Raycast(transform.position, -transform.right, out hit, float.PositiveInfinity))
         {
@@ -162,6 +161,7 @@ public class Movement : MonoBehaviour
         }
     }
 
+    //Allows the player to go up and down the ladder
     void ClimbLadder()
     {
         if (Is_Ladder)
