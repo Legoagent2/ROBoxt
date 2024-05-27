@@ -33,6 +33,8 @@ public class LadderMovement : MonoBehaviour
             inside = !inside;
         }
     }
+
+    //W is to go up the ladder and S is to go down
     void Update()
     {
         if(inside == true && Input.GetKey("w"))
