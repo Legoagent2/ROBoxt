@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class L1Pressure_Plate : MonoBehaviour
+{
+    //Sets the variables for the script
+    [SerializeField]
+    GameObject Cube;
+    bool isOpened = false;
+
+    //Detects when the player enters the collider
+    void OnTriggerEnter(Collider col)
+    {
+        if (isOpened == false)
+        {
+            isOpened = true;
+            Cube.transform.position += new Vector3(0, 0, -2);
+        }
+    }
+
+    //Detects when the player leaves the collider
+    private void OnTriggerExit(Collider col)
+    {
+        if (isOpened != false)
+        {
+            isOpened = false;
+            Cube.transform.position -= new Vector3(0, 0, -2);
+        }
+    }
+}
