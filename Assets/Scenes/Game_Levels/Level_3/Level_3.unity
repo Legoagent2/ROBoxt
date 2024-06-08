@@ -240,7 +240,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5883664771796075607, guid: 244547bb1f20e0b4abf60e395bb88118, type: 3}
   m_PrefabInstance: {fileID: 896458534736849440}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1715928883
+--- !u!114 &1715928888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253,6 +253,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movingblocks1: {fileID: 1977551641}
+--- !u!65 &1715928889
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715928881}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1865890733
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +728,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: aeb8d6328b42ad5468efb547748d3753, type: 2}
     - target: {fileID: 5710697813471080567, guid: 244547bb1f20e0b4abf60e395bb88118, type: 3}
       propertyPath: m_Size.x
-      value: 1.5
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 5710697813471080567, guid: 244547bb1f20e0b4abf60e395bb88118, type: 3}
       propertyPath: m_Size.y
@@ -715,7 +736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5710697813471080567, guid: 244547bb1f20e0b4abf60e395bb88118, type: 3}
       propertyPath: m_Size.z
-      value: 1.5
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 5710697813471080567, guid: 244547bb1f20e0b4abf60e395bb88118, type: 3}
       propertyPath: m_IsTrigger
@@ -1007,8 +1028,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5883664771796075607, guid: 244547bb1f20e0b4abf60e395bb88118, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1715928889}
+    - targetCorrespondingSourceObject: {fileID: 5883664771796075607, guid: 244547bb1f20e0b4abf60e395bb88118, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1715928883}
+      addedObject: {fileID: 1715928888}
     - targetCorrespondingSourceObject: {fileID: 6485159631092733205, guid: 244547bb1f20e0b4abf60e395bb88118, type: 3}
       insertIndex: -1
       addedObject: {fileID: 896458534736849442}

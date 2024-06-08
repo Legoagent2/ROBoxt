@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
 
     Animator Player;
     bool Walking;
+    bool Jumping;
 
     private void Awake()
     {
@@ -66,6 +67,31 @@ public class Movement : MonoBehaviour
         if (Walking == true)
         {
             Player.SetBool("Walking", true);
+        }
+
+        //Trying to set up the jump animation
+        if (Walking == true)
+        {
+            Player.SetBool("Walking", true);
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Jumping = true;
+        }
+        else
+        {
+            Jumping = false;
+        }
+
+        if (Jumping == false)
+        {
+            Player.SetBool("Jumping", false);
+        }
+
+        if (Jumping == true)
+        {
+            Player.SetBool("Jumping", true);
         }
 
         Jump();
