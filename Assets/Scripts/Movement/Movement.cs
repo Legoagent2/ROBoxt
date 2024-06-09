@@ -7,8 +7,8 @@ public class Movement : MonoBehaviour
     public float rotation = 90f;
     public bool Is_Ladder = false;
     private Rigidbody playerRigidbody;
-    private float jump_force_start = 2.5f;
-
+    public float jump_force_start;
+    
     Animator Player;
     bool Walking;
     bool Jumping;
@@ -25,6 +25,7 @@ public class Movement : MonoBehaviour
 
         Player = gameObject.GetComponentInChildren<Animator>();
         Walking = false;
+        
     }
 
     //Majority of this will play the animations
@@ -152,7 +153,7 @@ public class Movement : MonoBehaviour
         float jump_force_sim = jump_force_start;
         if((Physics.Raycast(transform.position - new Vector3(0.0f, 0.3f, 0.0f), transform.forward, 1.0f)) || (Physics.Raycast(transform.position - new Vector3(0.0f, 0.3f, 0.0f), -transform.forward, 1.0f)))
         {
-            jump_force_sim *= 3.0f;
+            jump_force_sim *= 2.5f;
         }
         if(UnityEngine.Input.GetKeyDown(KeyCode.Space) && (Is_Ladder == false))
         {
@@ -170,7 +171,10 @@ public class Movement : MonoBehaviour
     {
         Vector3 vec_forward = transform.forward;
         vec_forward = vec_forward * UnityEngine.Input.GetAxis("Horizontal") * 5.0f;
-        playerRigidbody.velocity = new Vector3(vec_forward.x, playerRigidbody.velocity.y, vec_forward.z ); 
+        playerRigidbody.velocity = new Vector3(vec_forward.x, playerRigidbody.velocity.y, vec_forward.z );
+        // reutrn to this to make child object rotate
+        
+        
     }
     void Rotate()
     {

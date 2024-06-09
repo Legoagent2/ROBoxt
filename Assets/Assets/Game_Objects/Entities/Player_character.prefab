@@ -201,10 +201,10 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 3693947087578095607}
   - {fileID: 6636682204085212793}
   - {fileID: 2703988706466485342}
   - {fileID: 8909808499002439995}
-  - {fileID: 3693947087578095607}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &3374027959548543036
@@ -302,6 +302,7 @@ MonoBehaviour:
   transform_player: {fileID: 6197545084505029618}
   rotation: 90
   Is_Ladder: 0
+  jump_force_start: 3
 --- !u!1 &6547955196996434638
 GameObject:
   m_ObjectHideFlags: 0
