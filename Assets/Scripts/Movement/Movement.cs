@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
     bool Walking;
     bool Jumping;
     bool TurningL;
+    bool TurningR;
+    bool ClimbingUp;
 
     private void Awake()
     {
@@ -96,7 +98,7 @@ public class Movement : MonoBehaviour
             Player.SetBool("Jumping", true);
         }
 
-        //Play the Turning Left animation
+        //Plays the Turning Left animation
         if (Input.GetKey(KeyCode.Q))
         {
             TurningL = true;
@@ -115,6 +117,49 @@ public class Movement : MonoBehaviour
         {
             Player.SetBool("TurningL", true);
         }
+
+        //Plays the Turning Right animation
+        if (Input.GetKey(KeyCode.E))
+        {
+            TurningR = true;
+        }
+        else
+        {
+            TurningR = false;
+        }
+
+        if (TurningR == false)
+        {
+            Player.SetBool("TurningR", false);
+        }
+
+        if (TurningR == true)
+        {
+            Player.SetBool("TurningR", true);
+        }
+
+        //Code is right the animation is wrong, get edward to place the working one through github
+        if (Input.GetKey(KeyCode.W))
+        {
+            ClimbingUp = true;
+        }
+        else
+        {
+            ClimbingUp = false;
+        }
+
+        if (ClimbingUp == false)
+        {
+            Player.SetBool("ClimbingUp", false);
+        }
+
+        if (ClimbingUp == true)
+        {
+            Player.SetBool("ClimbingUp", true);
+        }
+
+        //When I get the working animation the code will be the same
+        //ANIMATION FOR GOING DOWN THE LADDER WILL GO HERE
 
         Jump();
         Rotate();
