@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     Animator Player;
     bool Walking;
     bool Jumping;
+    bool TurningL;
 
     private void Awake()
     {
@@ -26,10 +27,10 @@ public class Movement : MonoBehaviour
         Walking = false;
     }
 
+    //Majority of this will play the animations
     void Update()
     {
-        //Walking
-        //Plays the walking animation going right
+        //Plays the Walking animation going right
         if (Input.GetKey(KeyCode.D))
         {
             Walking = true;
@@ -69,12 +70,12 @@ public class Movement : MonoBehaviour
             Player.SetBool("Walking", true);
         }
 
-        //Trying to set up the jump animation
         if (Walking == true)
         {
             Player.SetBool("Walking", true);
         }
 
+        //Plays the Jump animation
         if (Input.GetKey(KeyCode.Space))
         {
             Jumping = true;
@@ -92,6 +93,26 @@ public class Movement : MonoBehaviour
         if (Jumping == true)
         {
             Player.SetBool("Jumping", true);
+        }
+
+        //Play the Turning Left animation
+        if (Input.GetKey(KeyCode.Q))
+        {
+            TurningL = true;
+        }
+        else
+        {
+            TurningL = false;
+        }
+
+        if (TurningL == false)
+        {
+            Player.SetBool("TurningL", false);
+        }
+
+        if (TurningL == true)
+        {
+            Player.SetBool("TurningL", true);
         }
 
         Jump();
