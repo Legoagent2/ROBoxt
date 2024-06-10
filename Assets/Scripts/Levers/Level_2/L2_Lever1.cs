@@ -34,6 +34,8 @@ public class L2_Lever1 : MonoBehaviour
                 {
                     Movingblocks1.transform.position += new Vector3(-1, 0, 0);
                     blockMoved = false;
+
+
                 }
             }
             else

@@ -16,6 +16,7 @@ public class Movement : MonoBehaviour
     bool TurningR;
     bool ClimbingUp;
     bool ClimbingDown;
+    bool Button;
 
     private void Awake()
     {
@@ -28,7 +29,6 @@ public class Movement : MonoBehaviour
 
         Player = gameObject.GetComponentInChildren<Animator>();
         Walking = false;
-        
     }
 
     //Majority of this will play the animations
@@ -140,7 +140,7 @@ public class Movement : MonoBehaviour
         }
 
         //Plays the Climbing Up aniamtion
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && Is_Ladder == true)
         {
             ClimbingUp = true;
         }
@@ -160,7 +160,7 @@ public class Movement : MonoBehaviour
         }
 
         //Plays the Climbing Down animation
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && Is_Ladder == true)
         {
             ClimbingDown = true;
         }
@@ -177,6 +177,26 @@ public class Movement : MonoBehaviour
         if (ClimbingDown == true)
         {
             Player.SetBool("ClimbingDown", true);
+        }
+
+        //Plays the Button Press animation
+        if (Input.GetKey(KeyCode.F))
+        {
+            Button = true;
+        }
+        else
+        {
+            Button = false;
+        }
+
+        if (Button == false)
+        {
+            Player.SetBool("Button", false);
+        }
+
+        if (Button == true)
+        {
+            Player.SetBool("Button", true);
         }
 
         Jump();
@@ -205,7 +225,6 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         MoveLeftRight();
-
         ClimbLadder();
 
     }
